@@ -1,8 +1,8 @@
-// Example bill items
+// Example bill items with Serial Number
 const items = [
-  { desc: "Oneplus Z2 Bullet", qty: 1, rate: 1393.16 },
-  { desc: "CGST 9%", qty: 1, rate: 152.91 },
-  { desc: "SGST 9%", qty: 1, rate: 152.91 }
+  { desc: "Oneplus Z2 Bullet", sn: "R6240004E5H05E42B", qty: 1, rate: 1393.16 },
+  { desc: "CGST 9%", sn: "", qty: 1, rate: 152.91 },
+  { desc: "SGST 9%", sn: "", qty: 1, rate: 152.91 }
 ];
 
 const tbody = document.querySelector("#billTable tbody");
@@ -15,7 +15,10 @@ items.forEach((item, i) => {
 
   tr.innerHTML = `
     <td>${i + 1}</td>
-    <td>${item.desc}</td>
+    <td class="description">
+      ${item.desc}
+      ${item.sn ? `<span class="sn">SN: ${item.sn}</span>` : ""}
+    </td>
     <td>${item.qty}</td>
     <td>${item.rate.toFixed(2)}</td>
     <td>${amount.toFixed(2)}</td>
