@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cash Bill</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bill-container">
+  <div class="header">
+    <h2>RUNWAY MOBILES</h2>
+    <p>19E, 6th Street, Saibaba Colony, KK Pudur, Coimbatore 641038</p>
+    <p>Sales & Service & Mobile Accessories</p>
+    <div class="bill-info">
+      <p><b>Cash Bill No:</b> <span id="billNo">200</span></p>
+      <p><b>Date:</b> <span id="billDate">17/10/2024</span></p>
+      <p><b>GST No:</b> <span id="gstNo">33DZZPK8357M1Z8</span></p>
+    </div>
+  </div>
+
+  <p><b>To:</b> <span id="customerName">Prasanna Kumar</span> |
+     <b>Phone:</b> <span id="customerPhone">9629070390</span></p>
+
+  <table id="billTable">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Description of Items</th>
+        <th>Quantity</th>
+        <th>Rate (₹)</th>
+        <th>Amount (₹)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Items will be injected by JS -->
+    </tbody>
+  </table>
+
+  <div class="totals">
+    Total: ₹<span id="totalAmount">0.00</span>
+  </div>
+
+  <div class="footer">
+    <p>Goods once sold cannot be taken back or exchanged.</p>
+    <p>Subject to Coimbatore Jurisdiction Only.</p>
+    <p>Warranty available at service center only.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
